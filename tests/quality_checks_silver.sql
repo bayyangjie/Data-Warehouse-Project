@@ -82,23 +82,33 @@ WHERE prd_end_dt < prd_start_dt
 -- ==================================================================================
 -- Checking 'silver.crm_sales_details'
 -- ==================================================================================
--- Check for Invalid Dates
+-- Check for invalid dates
+SELECT NULLIF(sls_due_dt,0) sls_due_dt   -- Replacing entries with '0' with 'NULL' 
+FROM bronze.crm_sales_details
+WHERE sls_due_dt <= 0 -- Returns the newly replaced NULL values instead of '0's and returns any negative values unchanged
+    OR LEN(sls_due_dt) != 8 
+    OR sls_due_dt > 20500101 
+    OR sls_due_dt < 19000101;
+    
+
+-- Check for Invalid Dates (Order Date > Shipping/Due Dates)
 /* check returns clean with no invalid date orders */
 SELECT *
 FROM silver.crm_sales_details
-WHERE sls_order_dt > sls_ship_dt OR sls_order_dt > sls_due_dt
+WHERE sls_order_dt > sls_ship_dt OR sls_order_dt > sls_due_dt;
 
 
 -- Check data consistency between Sales, Quantity and Price after the transformations were applied previously
 /* check shows that calculations tally between the sales, quantity and price variables and the values format are consistent (i.e non NULLs, non-zeros) */
 
-sls_sales,
-sls_quantity, 
-sls_price
+SELECT DISTINCT
+    sls_sales,
+    sls_quantity, 
+    sls_price
 FROM silver.crm_sales_details
 WHERE sls_sales != sls_quantity * sls_price    
-OR sls_sales IS NULL OR sls_quantity IS NULL OR sls_price IS NULL   
-OR sls_sales <=0 OR sls_quantity <=0 OR sls_price <=0   
+    OR sls_sales IS NULL OR sls_quantity IS NULL OR sls_price IS NULL   
+    OR sls_sales <=0 OR sls_quantity <=0 OR sls_price <=0   
 ORDER BY sls_sales, sls_quantity, sls_price;
 
 
