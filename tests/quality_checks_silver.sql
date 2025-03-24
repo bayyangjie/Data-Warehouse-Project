@@ -106,3 +106,38 @@ ORDER BY sls_sales, sls_quantity, sls_price;
 -- Checking 'silver.erp_cust_az12'
 -- ==================================================================================
 -- Identify Out-of-Range Dates
+/* the check just returns the list of very old age customers , but does not have customers with age older than the present date which is correct */
+SELECT bdate
+FROM silver.erp_CUST_AZ12
+WHERE bdate < '1924-01-01' OR bdate > GETDATE()
+
+
+----- Data Standardization and Consistency -----
+SELECT DISTINCT gen
+FROM silver.erp_CUST_AZ12;
+
+
+-- ==================================================================================
+-- Checking 'silver.erp_loc_a101'
+-- ==================================================================================
+--- Data Standardization & Consistency
+/* Check shows that the distinct country strings follow a consistent naming format */
+SELECT DISTINCT CNTRY
+FROM silver.erp_LOC_A101
+ORDER BY CNTRY;
+
+
+-- ==================================================================================
+-- Checking 'silver.erp_px_cat_g1v2'
+-- ==================================================================================
+-- Check for unwanted spaces in string columns
+/* check verifies that there are no unwanted spaces in the inserted data in the SILVER layer */
+SELECT *
+FROM silver.erp_PX_CAT_G1V2
+WHERE CAT != TRIM(CAT) OR SUBCAT != TRIM(SUBCAT) OR MAINTENANCE != TRIM(MAINTENANCE)
+
+
+-- Data Standardization & Consistency
+/* Check verifies that the inserted distinct data for the low cardinality string columns in the SILVER layer is valid and clean */
+SELECT DISTINCT MAINTENANCE
+FROM silver.erp_PX_CAT_G1V2;
