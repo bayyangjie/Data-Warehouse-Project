@@ -72,7 +72,7 @@ SELECT
 	pn.prd_start_dt AS start_date
 FROM silver.crm_prd_info pn
 LEFT JOIN silver.erp_PX_CAT_G1V2 pc
-ON pn.cat_id = pc.id     -- recall that 'cat_id' was created by splitting out from the 'prd_key' column during the transformation step
+ON pn.cat_id = pc.id       -- 'cat_id' was created by splitting out from the 'prd_key' column during the transformation step
 WHERE prd_end_dt IS NULL;  -- to filter out historical data and only return current ongoing data for each . can also exclude 'end_dt' column in this case
 
 
