@@ -21,7 +21,7 @@ Usage:
 -- Create Dimension: gold.dim_customers
 -- ================================================================================================
 IF OBJECT_ID('gold.dim_customers', 'V') IS NOT NULL
-    DROP VIEW gold.dim_customers;
+    DROP VIEW gold.dim_customers;        -- Drop view if exists then recreate it agian with CREATE VIEW
 GO
 
 CREATE VIEW gold.dim_customers AS
