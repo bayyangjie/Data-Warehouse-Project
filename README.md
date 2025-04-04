@@ -28,6 +28,7 @@ Integration: Combination of the data from all the sources into a data model to u
 
 ## Tools used
 Draw.io: Creating data diagrams (i.e data models, data architecture, data flow)
+
 MS SQL: SQL Queries 
 
 
