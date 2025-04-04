@@ -27,8 +27,10 @@ Data quality: The imported data undergoes data cleaning to ensure accuracy of an
 Integration: Combination of the data from all the sources into a data model to understand relationships between the source tables
 
 ## Tools used
-Draw.io: Creating data diagrams (i.e data models, data architecture, data flow)
+Draw.io: Design data architecture, models, flows, and diagrams.
 
-MS SQL: SQL Queries 
+MS SQL: GUI for managing and interacting with databases.
+
+Github: Code documentation and description of different phases of the Data Warehouse creation.
 
 
