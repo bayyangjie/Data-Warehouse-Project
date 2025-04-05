@@ -2,7 +2,7 @@
 
 ## Data Architecture
 
-This project demonstrates the building of a Data Warehouse based on the Medallion Architecture which conceptually comprises of the Bronze, Silver and Gold layers.
+This project demonstrates the building of a Data Warehouse based on the Medallion Architecture.
 
 1. Bronze Layer: Stores raw data as it is from the source systems. The data is ingested from the raw csv files into the SQL server database.
    
@@ -10,7 +10,7 @@ This project demonstrates the building of a Data Warehouse based on the Medallio
    
 3. Gold Layer: Contains business-ready data that is housed within a Star Schema in this case for the purpose of reporting and analysis.
 
-Data loading into the Bronze and Silver layers is done using Full Load in this project. Truncating and Inserting steps are also put in place to prevent data duplication each time the batch processing is ran.
+Data is loaded into the Bronze and Silver layers as a Full Load in this project. Truncating and Inserting steps are also put in place to prevent data duplication during each batch processing run.
 
 <img src="https://github.com/bayyangjie/Data-Warehouse-Project/blob/main/docs/Data_Architecture.png?raw=true" width="100%">
 
