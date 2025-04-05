@@ -20,7 +20,7 @@ Data is loaded into the Bronze and Silver layers as a Full Load in this project.
 Create a data warehouse using MS SQL server to consolidate the sales data for reporting and decision-making.
 
 ### Specifications
-Data Sources: The source data is imported in the form of CSV files from the ERP and CRM systems.
+Data Sources: The source data pertains to ERP and CRM information and is imported in CSV file format.
 
 Data quality: The imported data undergoes data cleaning to ensure accuracy of analysis
 
