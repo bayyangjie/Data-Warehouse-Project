@@ -16,21 +16,18 @@ Data is loaded into the Bronze and Silver layers as a Full Load in this project.
 
 ## 🚀 Project Requirements
 
-### Objective
+### Building the Data Warehouse
+
+#### Objective
 Create a data warehouse using MS SQL server to consolidate the sales data for reporting and decision-making.
 
-### Specifications
-Data Sources: The source data pertains to ERP and CRM information and is imported in CSV file format.
-
-Data quality: The imported data undergoes data cleaning to ensure accuracy of analysis
-
-Integration: Combination of the ERP and CRM data into a single data model to understand relationships between the tables
+#### Specifications
+* [Data Sources](https://github.com/bayyangjie/Data-Warehouse-Project/tree/main/datasets): The source data pertains to ERP and CRM information and is imported in CSV file format. 
+* Data quality: The imported data undergoes data cleaning and transformations to ensure data consistency and accuracy of the analysis
+* Integration: Combination of the ERP and CRM data into a single [data model](https://github.com/bayyangjie/Data-Warehouse-Project/blob/main/docs/Data_Integration_Model.drawio.png?raw=true) to understand relationships between the tables
 
 ## 🛠️ Tools used
-Draw.io: Design data architecture, models, flows, and diagrams.
-
-MS SQL: GUI for managing and interacting with databases.
-
-Github: Code documentation and description of different phases of the Data Warehouse creation.
-
+* SQL Server Management Studio (SSMS): GUI for managing and interacting with databases.
+* Github: Code documentation and description of different phases of the Data Warehouse creation.
+* Draw.io: Design data architecture, models, flows, and diagrams.
 
