@@ -26,7 +26,7 @@ Data quality: The imported data undergoes data cleaning to ensure accuracy of an
 
 Integration: Combination of the data from all the sources into a data model to understand relationships between the source tables
 
-## Tools used
+## 🛠️ Tools used
 Draw.io: Design data architecture, models, flows, and diagrams.
 
 MS SQL: GUI for managing and interacting with databases.
