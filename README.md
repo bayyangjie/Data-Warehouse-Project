@@ -1,6 +1,6 @@
 # Data Warehouse Project
 
-## 🏗️ Data Architecture
+## 🏗️  Data Architecture
 
 This project demonstrates the building of a Data Warehouse based on the Medallion Architecture.
 
