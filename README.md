@@ -24,7 +24,7 @@ Data Sources: The source data pertains to ERP and CRM information and is importe
 
 Data quality: The imported data undergoes data cleaning to ensure accuracy of analysis
 
-Integration: Combination of the data from all the sources into a data model to understand relationships between the source tables
+Integration: Combination of the ERP and CRM data into a single data model to understand relationships between the tables
 
 ## 🛠️ Tools used
 Draw.io: Design data architecture, models, flows, and diagrams.
