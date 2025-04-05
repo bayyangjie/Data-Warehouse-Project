@@ -3,15 +3,15 @@
 DDL Script: Creating Views in Gold Layer
 ================================================================================================
 Script Purpose:
-    This script creates views for the Gold layer in the data warehouse. 
-    The Gold layer represents the final dimension and fact tables (Star Schema)
+This script creates views for the Gold layer in the data warehouse.
 
-    The views created in the GOLD layer represent the customers, products and sales.
+The Gold layer represents the final dimension and fact tables (Star Schema)
 
-    The CUSTOMERS and PRODUCTS dimension tables VIEWs are created through the table JOINs 
-    from the silver layer, and then stored in the GOLD layer.
-    The SALES fact table VIEW is created through joining the PRODUCTS and CUSTOMERS dimension tables
-    from the GOLD layer.
+The views created in the GOLD layer represent the customers, products and sales:
+- The CUSTOMERS and PRODUCTS dimension tables VIEWs are created through the table JOINs 
+from the silver layer, and then stored in the GOLD layer.
+- The SALES fact table VIEW is created through joining the PRODUCTS and CUSTOMERS dimension tables
+from the GOLD layer.
 
 Usage:
     - These views can be queried directly for analytics and reporting.
