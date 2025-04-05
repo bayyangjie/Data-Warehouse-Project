@@ -1,6 +1,6 @@
 # Data Warehouse Project
 
-## Data Architecture
+## 🏗️ Data Architecture
 
 This project demonstrates the building of a Data Warehouse based on the Medallion Architecture.
 
@@ -14,7 +14,7 @@ Data is loaded into the Bronze and Silver layers as a Full Load in this project.
 
 <img src="https://github.com/bayyangjie/Data-Warehouse-Project/blob/main/docs/Data_Architecture.png?raw=true" width="100%">
 
-## Project Requirements
+## 🚀 Project Requirements
 
 ### Objective
 Create a data warehouse using MS SQL server to consolidate the sales data for reporting and decision-making.
