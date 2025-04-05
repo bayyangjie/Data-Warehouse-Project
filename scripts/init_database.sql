@@ -11,13 +11,13 @@ Note:
 Running this script will drop the entire existing database 'DataWarehose' if it is existing. All data in the current database will be deleted. 
 */
 
-USE master;
+USE master;   -- brings user to main section where all databases are present so as not to be in the same database that is going to be dropped
 GO
 
 -- Drop and recreate the 'DataWarehhouse' database if recreating the database
-IF EXISTS (SELECT 1 FROM sys.databases WHERE name='DataWarehouse')
-BEGIN
-	ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name='DataWarehouse')      -- checking if a database named 'DataWarehouse' exists by checking the list of databases in the system view
+BEGIN          -- run the following code block to perform the DROP if the above database exists
+	ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;          -- ensures no active connections to the database otherwise DROP DATABASE command will fail
 	DROP DATABASE DataWarehouse;
 END;
 GO
